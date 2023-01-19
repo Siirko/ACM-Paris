@@ -247,7 +247,7 @@ delaunay_t *delaunay_bowyer_watson(list_t *nodes)
 {
     // This code has been created following the pseudo code available on
     // wikipedia. https://en.wikipedia.org/wiki/Bowyer%E2%80%93Watson_algorithm
-    /***********************************************************************/
+    /*************************************************************************/
     triangle_t *triangulation;
     CHK_ALLOC(triangulation = calloc(sizeof(triangle_t), 100000000),
               "calloc failed"); // that malloc is huge ( ͡° ͜ʖ ͡°)
@@ -420,9 +420,7 @@ end:
 void free_delaunay(delaunay_t *delaunay)
 {
     for (size_t i = 0; i < delaunay->size_triangles; i++)
-    {
         free(delaunay->triangles[i]);
-    }
     free(delaunay->triangles);
     free(delaunay);
 }

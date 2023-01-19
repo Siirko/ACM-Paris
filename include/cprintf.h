@@ -2,32 +2,32 @@
 #include <stdarg.h>
 #include <stdbool.h>
 
-#define CHK(op)                                                                \
-    do                                                                         \
-    {                                                                          \
-        if ((op) == -1)                                                        \
-            chprintf(1, #op);                                                  \
+#define CHK(op)                                                                                              \
+    do                                                                                                       \
+    {                                                                                                        \
+        if ((op) == -1)                                                                                      \
+            chprintf(1, #op);                                                                                \
     } while (0)
 
-#define CHK_ALLOC(op, info)                                                    \
-    do                                                                         \
-    {                                                                          \
-        if ((op) == NULL)                                                      \
-            chprintf(1, __FILE__, __LINE__, info, #op);                        \
+#define CHK_ALLOC(op, info)                                                                                  \
+    do                                                                                                       \
+    {                                                                                                        \
+        if ((op) == NULL)                                                                                    \
+            chprintf(1, __FILE__, __LINE__, info, #op);                                                      \
     } while (0)
 
-#define CHK_FREAD(op, fp, info)                                                \
-    do                                                                         \
-    {                                                                          \
-        if ((op) == 0 && ferror(fp))                                           \
-            chprintf(1, __FILE__, __LINE__, info, #op);                        \
+#define CHK_FREAD(op, fp, info)                                                                              \
+    do                                                                                                       \
+    {                                                                                                        \
+        if ((op) == 0 && ferror(fp))                                                                         \
+            chprintf(1, __FILE__, __LINE__, info, #op);                                                      \
     } while (0)
 
-#define CHK_FWRITE(op, size_to_write, info)                                    \
-    do                                                                         \
-    {                                                                          \
-        if ((op) != (size_to_write))                                           \
-            chprintf(1, __FILE__, __LINE__, info, #op);                        \
+#define CHK_FWRITE(op, size_to_write, info)                                                                  \
+    do                                                                                                       \
+    {                                                                                                        \
+        if ((op) != (size_to_write))                                                                         \
+            chprintf(1, __FILE__, __LINE__, info, #op);                                                      \
     } while (0)
 
 #define ANSI_COLOR_RED "\x1b[31m"
@@ -82,6 +82,5 @@ void eprintf(const char *msg, ...);
  * @param msg The format string
  * @param ... The arguments
  */
-void chprintf(int syserr, const char *file, int line, const char *info,
-              const char *msg, ...);
+void chprintf(int syserr, const char *file, int line, const char *info, const char *msg, ...);
 /** @} */

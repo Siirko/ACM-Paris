@@ -9,8 +9,7 @@
 #include <string.h>
 #include <tps.h>
 
-void sanatize_coordinates(double *lattitude, double *longitude,
-                          char *coordinates)
+void sanatize_coordinates(double *lattitude, double *longitude, char *coordinates)
 {
     char *endPtr;
     char *checkPtr;
@@ -76,8 +75,7 @@ int build_csv_bin(FILE *fp, char *path_bin, char delimiter)
     int n = size_column(fp, delimiter);
     if (n == 0)
     {
-        eprintf("column of file is empty, delimiter problem maybe?\n", __FILE__,
-                __LINE__);
+        eprintf("column of file is empty, delimiter problem maybe?\n", __FILE__, __LINE__);
         return EXIT_FAILURE;
     }
     // Skip header (first line)
