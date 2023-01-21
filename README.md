@@ -1,7 +1,7 @@
-# IR-2022-Projet
+# ACM-Paris
 
 ## Sommaires
-- [IR-2022-Projet](#ir-2022-projet)
+- [ACM-Paris](#acm-paris)
   - [Sommaires](#sommaires)
   - [Descriptions du projets](#descriptions-du-projets)
     - [Utilité de l'application](#utilité-de-lapplication)
